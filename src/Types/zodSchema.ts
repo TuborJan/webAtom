@@ -11,7 +11,7 @@ export const schemaNewProduct = z.object({
 export const schemaEditProduct = z.object({
   title: z.string().optional(),
   description: z.string().optional(),
-  price: z.number().positive("Price must be a positive number").optional(),
+  price: z.number().optional(),
   category: z.string().optional(),
   image: z.string().optional(),
 });
