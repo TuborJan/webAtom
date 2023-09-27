@@ -37,7 +37,7 @@ const Header = () => {
     };
     setIsOpen(false);
     postNewProduct(newProduct);
-    queryClient.setQueryData(["PRODUCTS"], (products?: IProduct[]) => {
+    queryClient.setQueryData(["PRODUCTS"], (products: any) => {
       return [...products, newProduct];
     });
     reset();
