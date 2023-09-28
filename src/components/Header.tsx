@@ -46,11 +46,11 @@ const Header = () => {
     <>
       <header className="flex justify-between max-w-[1440px] m-auto py-4">
         <Link href="/">
-          <h1 className="text-4xl">Shop</h1>
+          <h1 className="text-2xl lg:text-4xl">Shop</h1>
         </Link>
         {session?.data ? (
           <div className="flex items-center gap-6">
-            <p className="text-3xl">{session.data.user?.name}</p>
+            <p className="text-xl lg:text-3xl">{session.data.user?.name}</p>
             <Link
               href="#"
               onClick={() =>
@@ -58,12 +58,12 @@ const Header = () => {
                   callbackUrl: "/",
                 })
               }
-              className="text-3xl rounded-lg bg-slate-600 text-zinc-50"
+              className="text-xl lg:text-3xl rounded-lg bg-slate-600 text-zinc-50"
             >
               SignOut
             </Link>
             <p
-              className="text-3xl rounded-lg bg-slate-600 text-zinc-50 cursor-pointer"
+              className="text-xl lg:text-3xl rounded-lg bg-slate-600 text-zinc-50 cursor-pointer"
               onClick={() => setIsOpen(true)}
             >
               ADD
@@ -72,7 +72,7 @@ const Header = () => {
         ) : (
           <Link
             href="/api/auth/signin"
-            className="text-3xl rounded-lg bg-slate-600 text-zinc-50"
+            className="text-xl lg:text-3xl rounded-lg bg-slate-600 text-zinc-50"
           >
             SignIn
           </Link>

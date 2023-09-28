@@ -81,7 +81,7 @@ export default function Product({ params: { id } }: Props) {
         >
           На главную
         </Link>
-        <div className="mt-10 flex gap-20">
+        <div className="mt-10 flex flex-col p-10 lg:flex-row lg:p-0 gap-20">
           <img src={data.image} className="w-1/3" />
           <div>
             <h1 className="text-3xl w-fit max-w-[500px]">
